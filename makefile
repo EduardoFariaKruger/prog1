@@ -3,14 +3,14 @@
 CFLAGS = -Wall -g # flags de compilacao
 CC = gcc
 
-all: tp1.o polinomios.o
-	$(CC) -o tp1 tp1.o polinomios.o -lm
+all: teste.o polinomios.o
+	$(CC) -o teste teste.o polinomios.o -lm
 
 polinomios.o: polinomios.c polinomios.h
 	$(CC) -c $(CFLAGS) polinomios.c
 
-tp1.o: tp1.c polinomios.h
-	$(CC) -c $(CFLAGS) tp1.c
+teste.o: teste.c polinomios.h
+	$(CC) -c $(CFLAGS) teste.c
 
 clean:
-	rm -f *.o *~ tp1
+	rm -f *.o *~ teste
